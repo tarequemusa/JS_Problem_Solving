@@ -1,4 +1,4 @@
-// Write a JavaScript program to find the most frequent element in an array and return it. 
+// Task 3: Write a JavaScript program to find the most frequent element in an array and return it. 
 
 function findMostFrequentElement (arr) {
     let frequencyMap = new Map();
