@@ -28,4 +28,4 @@ function findMostFrequentElement (arr) {
 
 const input = [3, 5, 2, 5, 3, 3, 1, 4, 5];
 const result = findMostFrequentElement(input);
-console.log(result); // Output: 3
+console.log("Output is: ", result); // Output is: 3

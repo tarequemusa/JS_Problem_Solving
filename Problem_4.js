@@ -1,26 +1,25 @@
 // Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
 
-function findTwoNumbersWithSum (sortedArray, target) {
-    let left = 0;
-    let right = sortedArray.length - 1;
+function findTwoSum (arr, target) {
+    const numMap = new Map();
 
-    while(left < right) {
-        const sum = sortedArray[left] + sortedArray[right];
+    for(let i = 0; i < arr.length; i++) {
+        const complement = target - arr[i];
 
-        if(sum === target) {
-            return [left, right];
-        } else if(sum < target) {
-            left++;
-        } else {
-            right--;
+        if(numMap.has(complement)) {
+            return [numMap.get(complement), i];
         }
+
+        numMap.set(arr[i], i);
     }
 
-    // If no such pair is found, return an empty array
+    // If no pair is found, return an empty array or null.
     return [];
 }
 
+// Example:
 const inputArray = [1, 3, 6, 8, 11, 15];
 const targetValue = 9;
-const result = findTwoNumbersWithSum(inputArray, targetValue);
-console.log(result); // Output: [1, 2]
+const result = findTwoSum(inputArray, targetValue);
+console.log("Output is: ", result); // Output: [1, 2]
+

@@ -14,4 +14,4 @@ function sumOfPositiveNumbers (numbersArray) {
 
 const input = [2, -5, 10, -3, 7];
 const result = sumOfPositiveNumbers(input);
-console.log(result); // Output: 19
+console.log("Output is: ", result); // Output is: 19

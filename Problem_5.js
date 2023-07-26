@@ -21,6 +21,6 @@ function calculator (num1, operator, num2) {
 // Test the calculator function
 const number1 = 10;
 const number2 = 5;
-const operator = '/';
+const operator = '+';
 const result = calculator(number1, operator, number2);
-console.log(result); // Output: 15
+console.log("Output is: ", result); // Output: 15
